@@ -38,14 +38,14 @@ body {
     line-height: 1.17;
     }
 
-.logo-1half {
+.logo__1half {
     color: var(--accent-color);
 }
 
-.logo-2half {
+.logo__2half {
     color: var(--logo2half-color);
 }
-.logo-2half-2,
+.logo__2half-2,
 .address-title {
     color: var(--main-color);
 }
@@ -53,7 +53,7 @@ body {
 .header-contacts,
 .footer-contacts,
 .features-list,
-.working-list,
+.working__list,
 .command-list,
 .button-list,
 .project-list {
@@ -67,56 +67,48 @@ body {
     line-height: 1.17;
     letter-spacing: 0.02em;
 }
-.header-tel:hover,
-.header-mail:hover,
-.header-mail:hover .mail-icon,
-.header-tel:hover .tel-icon,
-.mail:hover,
-.tel:hover,
-.studio-link:hover,
-.portfolio-link:hover,
-.cotacts-link:hover,
+.header-contacts__tel:hover,
+.header-contacts__mail-link:hover,
+.header-contacts__mail-link:hover .header-contacts__mail-icon,
+.header-contacts__tel-link:hover .header-contacts__tel-icon,
+.header-contacts__mail-link:hover,
+.header-contacts__tel-link:hover,
+.nav-list__link:hover,
 .address-title:hover {
     color: var(--accent-color);
     fill: var(--accent-color);
 }
-.header-tel:focus,
-.header-mail:focus,
-.header-mail:focus .mail-icon,
-.header-tel:focus .tel-icon,
-.mail:focus,
-.tel:focus,
-.studio-link:focus,
-.portfolio-link:focus,
-.cotacts-link:focus,
+.header-contacts__tel-link:focus,
+.header-contacts__mail-link:focus,
+.header-contacts__mail-link:focus .header-contacts__mail-icon,
+.header-contacts__tel-link:focus .header-contacts__tel-icon,
+.header-contacts__mail-link:focus,
+.header-contacts__tel-link:focus,
+.nav-list__link:focus,
 .address-title:focus {
     color: var(--accent-color);
     fill: var(--accent-color);
 }
 
-.studio-link,
-.portfolio-link,
-.cotacts-link {
+.nav-list__link {
     color: inherit;
 }
 
-.header-tel,
-.header-mail {
+.header-contacts__tel-link,
+.header-contacts__mail-link {
     color: var(--paragraf-color);
+    text-decoration: none;
+        }
 }
 
 .tel,
 .mail {
     color: var(--footer-contacts-color);
 }
-.header-tel,
-.header-mail,
 .tel,
 .mail,
 .address-title,
-.studio-link,
-.portfolio-link,
-.cotacts-link {
+.nav-list__link {
     text-decoration: none;
 }
 
@@ -124,7 +116,7 @@ body {
     background-color: var(--footer-color);
 }
 
-.hero-title {
+.hero__title {
     color: var(--main-color);
     font-weight: 900;
     font-size: 44px;
@@ -134,7 +126,7 @@ body {
     text-transform: uppercase;
 }
 
-.hero-button {
+.hero__button {
     color: var(--main-color);
     background: var(--accent-color);
     cursor: pointer;
@@ -147,30 +139,30 @@ body {
 
 }
 
-.hero-button:hover,
-.hero-button:focus {
+.hero__button:hover,
+.hero__button:focus {
     color: var(--main-color);
     background: var(--accent-color);
 }
 
-.features-title {
+.features__title {
     display: none;
 }
 
-.features-heading {
+.features-list__heading {
     text-transform: uppercase;
     font-size: 14px;
     line-height: 1.17;
 }
 
-.features-text {
+.features-list__text {
     font-size: 14px;
     line-height: 1.7;
     color: var(--paragraf-color);
 }
 
-.working-title,
-.command-title {
+.working__title,
+.command__title {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
@@ -242,7 +234,7 @@ body {
     align-content: center;
 }
 /*Header*/
-.section-header {
+.page-header {
     border-bottom: 1px solid var(--header-border-color);
     padding-top: 24px;
     padding-bottom: 24px;
@@ -283,11 +275,11 @@ body {
     padding-bottom: 210px;
     margin: 0 auto;
     }
-.hero-title {
+.hero__title {
     width: 700px;
     margin: 0 auto 30px auto;
 }
-.hero-button {
+.hero__button {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -304,18 +296,18 @@ body {
         padding-left: 0;
         gap: 30px;
     }
-    .features-list li {
+    .features-list__item {
         width: calc((100%-30px*3)/4)
     }
-    .features-heading {
+    .features-list__heading {
         margin: 0 0 10px 0;
     }
-    .features-text {
+    .features-list__text {
         margin: 0;
     }
 
     /*Working*/
-    .working-title {
+    .working__title {
         margin: 0 0 50px 0;
     }
     
@@ -326,7 +318,7 @@ body {
         align-content: center;
     }
     
-    .working-list {
+    .working__list {
         display: flex;
         box-sizing: border-box;
         justify-content: center;
@@ -435,19 +427,19 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.header-contacts-item {
+.header-contacts__item {
     align-items: center;
     display: flex;
 }
-.mail-icon {
+.header-contacts__mail-icon {
     fill: var(--paragraf-color);
     margin-right: 10px;
 }
-.tel-icon {
+.header-contacts__tel-icon {
     margin-right: 10px;
     fill: var(--paragraf-color);
 }
-.features-icon-box {
+.features-list__icon-box {
     width: 270px;
     height: 120px;
     display: flex;
@@ -589,33 +581,31 @@ body {
 /* Домашнє завдання 5*/
 
 .social-link,
-.studio-link,
-.portfolio-link,
-.cotacts-link,
+.nav-list__link,
 .mail,
-.header-tel,
-.header-mail,
-.mail-icon,
-.tel-icon,
+.header-contacts__tel,
+.header-contacts__mail,
+.header-contacts__mail-icon,
+.header-contacts__tel-icon,
 .tel,
 .address-title,
 .clients-list-logo,
 .clients-link,
 .button-list-item,
 .project-list-item,
-.menu-link::after
+.nav-list__link::after
  {
     transition-property: color, background-color, fill, box-shadow, border-color, opacity, visibility, transform;
     transition-duration: var(--trans-duration);
     transition-timing-function: var(--cubic);
     }
-    .working-item {
+    .working__item {
         position: relative;
     }
-    .working-img {       
+    .working__img {       
         display: block;
     }
-    .working-text {
+    .working__text {
         position: absolute;
         display: flex;
         left: 0;
@@ -633,11 +623,11 @@ body {
         letter-spacing: 0.03em;
         color: #FFFFFF;
       }
-.menu-link {
+.nav-list__link {
     position: relative;
     display: block;
 }
-.menu-link::after {
+.nav-list__link::after {
     content: "";
     position: absolute;
     display: block;
@@ -649,15 +639,15 @@ body {
     background-color: var(--accent-color);
     opacity: 0;
 }
-.menu-link.current::after {
+.nav-list__link.current::after {
     content: "";
     opacity: 1;
 }
-.menu-link.current {
+.nav-list__link.current {
     color: var(--accent-color);
 }
-.menu-link:hover::after,
-.menu-link:focus::after {
+.nav-list__link:hover::after,
+.nav-list__link:focus::after {
 opacity: 1;
 }
 .overlay-block {
