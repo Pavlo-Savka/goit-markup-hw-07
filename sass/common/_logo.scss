@@ -11,12 +11,15 @@
 }
 
 .logo__1half {
-    color: var(--accent-color);
+    color: $accent-color;
 }
 
 .logo__2half {
-    color: var(--logo2half-color);
+    color: $logo2half-color;
 }
 .logo__2half--inverse {
-    color: var(--main-color);
+    color: $main-color;
+}
+.page-footer__logo {
+    margin-bottom: 20px;
 }

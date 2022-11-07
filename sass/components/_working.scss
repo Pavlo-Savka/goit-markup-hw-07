@@ -20,6 +20,7 @@
         padding: 0;
         margin: 0;
         gap: 30px;
+        list-style-type: none;
     }
         .working__item {
             position: relative;
@@ -45,5 +46,5 @@
             font-size: 14px;
             line-height: 1.14;
             letter-spacing: 0.03em;
-            color: #FFFFFF;
+            color: $main-color;
         }
