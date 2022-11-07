@@ -1,0 +1,54 @@
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients .container {
+    flex-direction: column;
+}
+
+.clients__title {
+    margin: 0 0 50px 0;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.clients__list {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    gap: 30px;
+    margin: 0;
+}
+
+.company {
+    width: 170px;
+    height: 92px;
+}
+
+.company__logo {
+    fill: var(--icons-color);
+}
+
+.company__link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--icons-color);
+    border-radius: 4px;
+}
+
+.company__link:hover,
+.company__link:focus {
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+}
+
+.company__link:hover .company__logo,
+.company__link:focus .company__logo {
+    fill: var(--accent-color);
+}
