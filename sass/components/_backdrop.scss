@@ -8,10 +8,10 @@
     transition-property: opacity, visibility, transform;
     transition-duration: $trans-duration;
     transition-timing-function: $cubic;
+    &.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
 }
 
-.backdrop.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}

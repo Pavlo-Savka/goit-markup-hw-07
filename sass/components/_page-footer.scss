@@ -11,22 +11,25 @@
         }
 }
 
-.footer-contacts__tel,
-.footer-contacts__mail {
+.footer-contacts__tel {
     color: $footer-contacts-color;
+    &:hover,
+    &:focus {
+            color: $accent-color;
+        }
 }
 
-.footer-contacts__tel:hover,
-.footer-contacts__mail:hover,
-.footer-contacts__tel:focus,
-.footer-contacts__mail:focus {
-    color: $accent-color;
+.footer-contacts__mail {
+    color: $footer-contacts-color;
+    &:hover,
+    &:focus {
+            color: $accent-color;
+        }
 }
 
 .footer-contacts__tel,
 .footer-contacts__mail,
-.footer-contacts__address,
-.nav-list__link {
+.footer-contacts__address {
     text-decoration: none;
 }
 .footer-contacts__tel {
@@ -108,15 +111,16 @@
     border-radius: 4px;
     filter: drop-shadow(0px 4px 4px $foter-shadow);
     color: $main-color;
+    &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.25;
+            display: flex;
+            align-items: center;
+            color: $footer-contacts-color;
+        }
 }
-.footer-subscribe__email::placeholder {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-    display: flex;
-    align-items: center;
-    color: $footer-contacts-color;
-}
+
 .footer-subscribe__button {
     width: 200px;
     height: 50px;

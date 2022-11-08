@@ -150,35 +150,27 @@
             background-color: $modal-button-hover;
         }
 }
-
-
-
-
+.modal__terms-link {
+    color: $accent-color;
+}
 .modal__terms-label {
     position: relative;
     padding-left: 23px;
     font-size: 14px;
     line-height: 1.7;
     color: $paragraf-color;
-}
-
-.modal__terms-link {
-    color: $accent-color;
-}
-
-.modal__terms-label::before {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    border: 2px solid $headline-color;
-    border-radius: 2px;
-}
-
-.modal__terms-label::after {
+    &::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        border: 2px solid $headline-color;
+        border-radius: 2px;
+    }   
+    &::after {
     content: "";
     position: absolute;
     width: 16px;
@@ -194,7 +186,7 @@
     background-color: $accent-color;
     opacity: 0;
 }
-
+}
 .modal__checkbox:checked+.modal__terms-label::after {
     opacity: 1;
 }

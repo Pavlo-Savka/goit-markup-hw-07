@@ -13,6 +13,7 @@ letter-spacing: 0.02em;
     position: relative;
     display: block;
     color: inherit;
+    text-decoration: none;
     transition-property: color, background-color, fill, box-shadow, border-color, opacity, visibility, transform;
     transition-duration: $trans-duration;
     transition-timing-function: $cubic;
@@ -30,14 +31,7 @@ letter-spacing: 0.02em;
             opacity: 1;
     }
     }
-}
-
-.nav-container {
-    display: flex;
-    align-items: center;
-}
-
-.nav-list__link::after {
+&::after {
     content: "";
     position: absolute;
     display: block;
@@ -52,12 +46,17 @@ letter-spacing: 0.02em;
     transition-duration: $trans-duration;
     transition-timing-function: $cubic;
 }
-.nav-list__link--current::after {
-    content: "";
-    opacity: 1;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
 }
 .nav-list__link--current {
     color: $accent-color;
+    &::after {
+            content: "";
+            opacity: 1;
+        }
 }
 
 
